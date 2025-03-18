@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Main menu item -->
+        <menuitem id="menu_calculator_root"
+                  name="Calculator"
+                  web_icon="calculator_app,static/description/icon.png"
+                  sequence="100"/>
+        
+        <!-- Calculator submenu -->
+        <menuitem id="menu_calculator"
+                  name="Calculator"
+                  parent="menu_calculator_root"
+                  action="calculator_client_action"
+                  sequence="10"/>
+        
+        <!-- History submenu -->
+        <menuitem id="menu_calculator_history"
+                  name="History"
+                  parent="menu_calculator_root"
+                  action="action_calculator_history"
+                  sequence="20"/>
+    </data>
+</odoo>

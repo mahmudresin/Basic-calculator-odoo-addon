@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Calculator History Tree View -->
+        <record id="view_calculator_history_tree" model="ir.ui.view">
+            <field name="name">calculator.history.tree</field>
+            <field name="model">calculator.history</field>
+            <field name="arch" type="xml">
+                <list string="Calculator History">
+                    <field name="name"/>
+                    <field name="result"/>
+                    <field name="user_id"/>
+                    <field name="create_date"/>
+                </list>
+            </field>
+        </record>
+        
+        <!-- Calculator History Form View -->
+        <record id="view_calculator_history_form" model="ir.ui.view">
+            <field name="name">calculator.history.form</field>
+            <field name="model">calculator.history</field>
+            <field name="arch" type="xml">
+                <form string="Calculator History">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="expression"/>
+                            <field name="result"/>
+                            <field name="user_id"/>
+                            <field name="create_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- Calculator History Search View -->
+        <record id="view_calculator_history_search" model="ir.ui.view">
+            <field name="name">calculator.history.search</field>
+            <field name="model">calculator.history</field>
+            <field name="arch" type="xml">
+                <search string="Calculator History">
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <group expand="0" string="Group By">
+                        <filter string="User" name="user" domain="[]" context="{'group_by':'user_id'}"/>
+                        <filter string="Date" name="date" domain="[]" context="{'group_by':'create_date:day'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <!-- Calculator History Action -->
+        <record id="action_calculator_history" model="ir.actions.act_window">
+            <field name="name">Calculator History</field>
+            <field name="res_model">calculator.history</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_calculator_history_search"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No calculator history yet!
+                </p>
+                <p>
+                    Use the calculator to generate history entries.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

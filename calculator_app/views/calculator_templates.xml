@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="calculator_client_action" model="ir.actions.client">
+            <field name="name">Calculator</field>
+            <field name="tag">calculator_app</field>
+        </record>
+    </data>
+</odoo>

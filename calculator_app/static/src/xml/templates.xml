@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="calculator_app.Calculator" owl="1">
+        <div class="calculator-container">
+            <div class="calculator-display" t-esc="state.displayValue"/>
+            <div class="calculator-buttons">
+                <button class="calculator-clear" type="button" t-on-click="onClearClick">C</button>
+                <button class="calculator-backspace" type="button" t-on-click="onBackspaceClick">&#8592;</button>
+                <button class="calculator-history" type="button" t-on-click="onHistoryClick">H</button>
+                <button class="calculator-button calculator-operator" type="button" data-value="/" t-on-click="onButtonClick">/</button>
+                
+                <button class="calculator-button" type="button" data-value="7" t-on-click="onButtonClick">7</button>
+                <button class="calculator-button" type="button" data-value="8" t-on-click="onButtonClick">8</button>
+                <button class="calculator-button" type="button" data-value="9" t-on-click="onButtonClick">9</button>
+                <button class="calculator-button calculator-operator" type="button" data-value="*" t-on-click="onButtonClick">*</button>
+                
+                <button class="calculator-button" type="button" data-value="4" t-on-click="onButtonClick">4</button>
+                <button class="calculator-button" type="button" data-value="5" t-on-click="onButtonClick">5</button>
+                <button class="calculator-button" type="button" data-value="6" t-on-click="onButtonClick">6</button>
+                <button class="calculator-button calculator-operator" type="button" data-value="-" t-on-click="onButtonClick">-</button>
+                
+                <button class="calculator-button" type="button" data-value="1" t-on-click="onButtonClick">1</button>
+                <button class="calculator-button" type="button" data-value="2" t-on-click="onButtonClick">2</button>
+                <button class="calculator-button" type="button" data-value="3" t-on-click="onButtonClick">3</button>
+                <button class="calculator-button calculator-operator" type="button" data-value="+" t-on-click="onButtonClick">+</button>
+                
+                <button class="calculator-button" type="button" data-value="0" t-on-click="onButtonClick">0</button>
+                <button class="calculator-button" type="button" data-value="." t-on-click="onButtonClick">.</button>
+                <button class="calculator-equals" type="button" t-on-click="onEqualsClick">=</button>
+            </div>
+        </div>
+    </t>
+</templates>
