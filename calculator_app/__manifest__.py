@@ -29,7 +29,7 @@
         ],
     },
     'images': [
-      'static/description/cover.gif',
+      'static/description/screenshot.jpg',
   ],
     'license': 'LGPL-3',
     'application': True,
