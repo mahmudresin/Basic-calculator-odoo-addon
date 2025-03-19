@@ -28,6 +28,9 @@
             'calculator_app/static/src/xml/templates.xml',
         ],
     },
+    'images': [
+      'static/description/screenshot.jpg',
+  ],
     'license': 'LGPL-3',
     'application': True,
     'installable': True,
